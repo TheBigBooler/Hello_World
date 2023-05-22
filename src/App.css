@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #777;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#app {
+  height: 100vh;
+  padding: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 18px;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.app>* {
+  background: #fff;
+  border-radius: 6px;
+  border: 4px solid #333;
+  box-shadow: 0 8px 12px -4px black;
+  padding: 8px;
+  overflow-y: scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.dark-mode {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.dark-mode.dark {
+  background: #222;
+  color: #ddd;
+}
+
+.dark-mode.light {
+  background: #ddd;
+  color: #222;
+}
+
+.tic-tac-toe {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.todo {
+  grid-column: 2;
+  grid-row: 2;
 }
